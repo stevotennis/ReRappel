@@ -4,3 +4,32 @@
 .product_table th {
 	padding-right: 1em;
 }
+
+.product_grid {
+	width: 300px;
+}
+
+.product_grid p {
+	text-align: center;
+}
+
+.product_grid h1 {
+	text-align: center;
+	font-size: 25px;
+}
+
+.product_grid img{
+	max-height: 100%;
+	max-width: 300px;
+}
+
+.product_grid .product_button{
+	padding-left: 55px;
+	margin: auto;
+}
+
+.product_grid a:hover{
+    color: blue;
+    transition: color 600ms;
+    text-decoration: none;
+}
