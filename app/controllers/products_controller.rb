@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.limit(4)
+    @products = Product.all
   end
 
   # GET /products/1
@@ -28,13 +28,15 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to '/static_pages/landing_page/', notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
+    # redirect_to '/products/'
   end
 
   # PATCH/PUT /products/1

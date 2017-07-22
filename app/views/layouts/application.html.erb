@@ -27,16 +27,16 @@
           </button>
 
           <div class="reRappel navbar-brand">
-            <a href="#">ReRappel</a>
+            <a href="/static_pages/landing_page/">ReRappel</a>
             <!-- <img class="logo" src="img/climb.png" alt="climb-logo"> -->
           </div> <!--end projectName -->
         </div> <!--end navbar-header -->
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
+            <li><a href='/static_pages/landing_page/'>Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href='/products/'>Products</a></li>
             <li><a href="#">Work</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">FAQ</a></li>
@@ -45,15 +45,19 @@
       </div> <!-- end container-fluid -->
     </nav> <!-- end navbar -->
 
+    <br>
+
     <%= yield %>
+
+    <br>
 
     <footer class="container">
 
       <div class="footer-bottom clear">
         <nav class="nav-footer desktop-only">
-          <a href="#" class="footer-nav-item" title="Home">Home</a>
+          <a href="/static_pages/landing_page/" class="footer-nav-item" title="Home">Home</a>
           <a href="#" class="footer-nav-item" title="About">About</a>
-          <a href="#" class="footer-nav-item" title="Products">Products</a>
+          <a href="/products/" class="footer-nav-item" title="Products">Products</a>
           <a href="#" class="footer-nav-item" title="Work">Work</a>
           <a href="#" class="footer-nav-item" title="Contact">Contact</a>
           <a href="#" class="footer-nav-item last" title="FAQ">FAQ</a>
