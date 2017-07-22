@@ -28,8 +28,13 @@
 
           <div class="reRappel navbar-brand">
             <a href="/static_pages/landing_page/">ReRappel</a>
-            <!-- <img class="logo" src="img/climb.png" alt="climb-logo"> -->
           </div> <!--end projectName -->
+          <%= form_with(url: products_path, method: 'get', class: 'navbar-form navbar-left') do |form| %>
+            <div class="form-group">
+              <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control' %>
+            </div>
+            <%= form.submit 'Search', class: 'btn btn-default' %>
+          <% end %>
         </div> <!--end navbar-header -->
 
         <div class="navbar-collapse collapse">

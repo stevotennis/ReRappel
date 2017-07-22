@@ -2,7 +2,7 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <% @products.each do |product| %>
+    <% @products.each_with_index do |product, index| %>
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active <%= " active" if product == @products.first %>"></li>
     <% end %>
   </ol>
@@ -29,3 +29,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
