@@ -29,7 +29,7 @@
           <div class="reRappel navbar-brand">
             <a href="/static_pages/landing_page/">ReRappel</a>
           </div> <!--end projectName -->
-          <%= form_with(url: products_path, method: 'get', class: 'navbar-form navbar-left') do |form| %>
+          <%= form_with(url: products_path, method: 'get', class: 'navbar-form navbar-left', local: true) do |form| %>
             <div class="form-group">
               <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control' %>
             </div>
