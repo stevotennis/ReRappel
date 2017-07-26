@@ -31,7 +31,7 @@
           </div> <!--end projectName -->
           <%= form_with(url: products_path, method: 'get', class: 'navbar-form navbar-left', local: true) do |form| %>
             <div class="form-group">
-              <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control' %>
+              <%= form.text_field :q, id: 'q', value: params[:q], class: 'form-control', placeholder: 'Search item' %>
             </div>
             <%= form.submit 'Search', class: 'btn btn-default' %>
           <% end %>
@@ -43,7 +43,7 @@
             <li><a href="#">About</a></li>
             <li><a href='/products/'>Products</a></li>
             <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/static_pages/contact/">Contact</a></li>
             <li><a href="#">FAQ</a></li>
           </ul>
         </div> <!-- end navbar-collapse collapse -->
