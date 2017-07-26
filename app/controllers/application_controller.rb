@@ -5,9 +5,5 @@ class ApplicationController < ActionController::Base
 	@name = params[:name]
 	@email = params[:email]
 	@message = params[:message]
-	ActionMailer::Base.mail(from: @email,
-	  to: 'stevotennis@gmail.com',
-	  subject: "A new contact form message from #{@name}",
-	  body: @message).deliver_now
-	end
+	UserMailer.contact_form(@email, @name, @message).deliver_now
 end
