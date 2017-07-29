@@ -58,5 +58,8 @@ group :production do
   gem 'pg'
 end
 
-# 
+# devise used for authentication 
 gem 'devise'
+
+# cancancan used for authorization
+gem 'cancancan', '~> 1.10'
