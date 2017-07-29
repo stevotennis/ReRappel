@@ -1,0 +1,25 @@
+<div class="container sign_in_form">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <h2 class='sign_up_link'>Sign up</h2>
+  <%= devise_error_messages! %>
+
+  <%= f.label :email, class: 'sr-only', for: 'inputEmail' %><br />
+  <%= f.email_field :email, autofocus: true, class: 'form-control', id: 'inputEmail', placeholder: 'Email address' %>
+
+  <%= f.label :password, for: 'inputPassword', class: 'sr-only' %><br />
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %><br />
+  <%= f.password_field :password, autocomplete: "off", id: 'inputPassword', class: 'form-control', placeholder: 'Password', required: true %>
+
+    <%= f.label :password_confirmation, for: 'inputPassword', class: 'sr-only' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", id: 'inputPassword', class: 'form-control', placeholder: 'Confirm password', required: true %><br>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+  <%- if controller_name != 'sessions' %>
+  <p class='sign_up_link'>
+    <%= link_to "Already a member? Log in here.", new_session_path(resource_name) %><br />
+  </p>
+<% end -%>
+<% end %>
+</div>

@@ -38,17 +38,27 @@
         </div> <!--end navbar-header -->
 
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right pull-right">
             <li><a href='/static_pages/landing_page/'>Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href='/products/'>Products</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="/orders/">Orders</a></li>
             <li><a href="/static_pages/contact/">Contact</a></li>
             <li><a href="#">FAQ</a></li>
+            <li>
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+  <% else %>
+    <%= link_to('Login', new_user_session_path) %>
+  <% end %>
+  </li>
           </ul>
         </div> <!-- end navbar-collapse collapse -->
       </div> <!-- end container-fluid -->
     </nav> <!-- end navbar -->
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
     <br>
 
@@ -63,7 +73,7 @@
           <a href="/static_pages/landing_page/" class="footer-nav-item" title="Home">Home</a>
           <a href="#" class="footer-nav-item" title="About">About</a>
           <a href="/products/" class="footer-nav-item" title="Products">Products</a>
-          <a href="#" class="footer-nav-item" title="Work">Work</a>
+          <a href="/orders/" class="footer-nav-item" title="Orders">Orders</a>
           <a href="#" class="footer-nav-item" title="Contact">Contact</a>
           <a href="#" class="footer-nav-item last" title="FAQ">FAQ</a>
           <a href="#" class="footer-nav-item last" title="Back-Top">Back to Top</a>
