@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+  <strong><%= @product.name %></strong>
+</h1>
+
 <%= image_tag(@product.image_url) =%>
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
 </p>
 
 <p>
@@ -29,6 +24,16 @@
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
+</p>
+
+<p>
+  <strong><%= @product.highest_rating_comment.rating %></strong>
+  <p>"<%= @product.highest_rating_comment.body %>"</p>
+</p>
+
+<p>
+  <strong><%= @product.lowest_rating_comment.rating %></strong>
+  <p>"<%= @product.lowest_rating_comment.body %>"</p>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
