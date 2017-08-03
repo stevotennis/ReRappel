@@ -3,7 +3,7 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <% @products.each_with_index do |product, index| %>
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active <%= " active" if product == @products.first %>"></li>
+      <li data-target="#carousel-example-generic" data-slide-to=" <%= index %>" class="active <%= " active" if product == @products.first %>"></li>
     <% end %>
   </ol>
 
