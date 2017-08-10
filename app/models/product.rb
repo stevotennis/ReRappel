@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
 	has_many :products
 	has_many :comments
+	validates :name, presence: true
 
 	def self.search(search_term)
 	  if Rails.env.development?
@@ -12,6 +13,7 @@ class Product < ApplicationRecord
 
 	def highest_rating_comment
   	  comments.rating_desc.first
+  	  self.per_page = 10
 	end
 
 	def lowest_rating_comment
