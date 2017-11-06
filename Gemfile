@@ -67,6 +67,9 @@ gem 'cancancan', '~> 1.10'
 # pagination
 gem 'will_paginate', '~> 3.1.0'
 
+# for functional testing
+gem 'rails-controller-testing'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
 end
