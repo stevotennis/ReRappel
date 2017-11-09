@@ -70,6 +70,9 @@ gem 'will_paginate', '~> 3.1.0'
 # for functional testing
 gem 'rails-controller-testing'
 
+# stripe used for payment
+gem 'stripe'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
